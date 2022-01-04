@@ -1,10 +1,21 @@
 import React, { useState } from 'react'
+import { useDispatch } from 'react-redux';
+import { addTask } from '../../redux/actions/TodoAction';
 
-const AddTask = ({handleAdd}) => {
-
+const AddTask = () => {
+const dispatch = useDispatch()
     const [value, setValue] = useState('');
     const handleOnChange = (e) => {
         setValue(e.target.value)
+    }
+    const handleAdd = (newTask) => {
+    if(value){
+      dispatch(addTask(newTask))
+    }
+    else{
+      alert("empty value")
+    }
+      
     }
    
 

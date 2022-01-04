@@ -10,9 +10,6 @@ function App(props) {
   const todoList = useSelector(state => state.todoList)
   const dispatch = useDispatch()
   
-  const handleAdd = (newTask) => {
-    dispatch(addTask(newTask))
-  }
  
   const HandleDelete = (idtask) =>{
     dispatch(DeleteTask(idtask))
@@ -21,7 +18,7 @@ function App(props) {
   return (
     <div className="app">
       <h1> ToDo App</h1>
-      <AddTask handleAdd={handleAdd} />
+      <AddTask  />
       <TodoList todo={todoList}  HandleDelete={HandleDelete}/>
       
     </div>
