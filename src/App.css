@@ -110,3 +110,6 @@ input {
     rgba(17, 122, 255, 1) 100%
   );
 }
+.undo{
+  text-decoration: line-through;
+}

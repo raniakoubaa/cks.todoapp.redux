@@ -6,10 +6,7 @@ const AddTask = ({handleAdd}) => {
     const handleOnChange = (e) => {
         setValue(e.target.value)
     }
-    // const handleAdd = () => {
-    //     setValue('')
-    //     addTask(value)
-    // }
+   
 
     return (
          <div className='add'>
